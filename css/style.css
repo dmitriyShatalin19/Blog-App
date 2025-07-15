@@ -1,15 +1,30 @@
 body {
     font-family: "Inter", sans-serif;
 }
-.title-text {
+.content {
+    width: 1200px;
+    margin: auto;
+    padding-top: 102px;
+
+}
+.posts-content {
+    display: flex;
+    flex-direction: row;
+    gap: 100px
+}
+.subtitle {
+    margin-bottom: 60px;
     font-weight: 700;
     font-size: 40px;
 }
 .title-input {
     width: 500px;
-    height: 6dvh;
+    height: 60px;
+    padding: 11px 0px 10px 20px;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #979797;
     border: 1px solid black;
 }
 .new-post-btn {
@@ -19,4 +34,8 @@ body {
     font-weight: 400;
     font-size: 32px;
     color: #fff;
+}
+.posts__title {
+    font-size: 32px;
+    color: #979797;
 }
