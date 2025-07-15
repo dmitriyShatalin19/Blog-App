@@ -1,3 +1,22 @@
 body {
     font-family: "Inter", sans-serif;
 }
+.title-text {
+    font-weight: 700;
+    font-size: 40px;
+}
+.title-input {
+    width: 500px;
+    height: 6dvh;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.new-post-btn {
+    width: 500px;
+    height: 60px;
+    background-color: #0094ff;
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+}
