@@ -1,22 +1,46 @@
-let post = '';
+const posts = [];
 
-const titleInputNode = document.querySelector('.js-title-input');
+const postTitleInputNode = document.querySelector('.js-post-title-input');
+const postTextInputNode = document.querySelector('.js-post-text-input');
 const newPostBtnNode = document.querySelector('.js-new-post-btn');
 const postsNode = document.querySelector('.js-posts');
 
 newPostBtnNode.addEventListener('click', function() {
     const postFromUser = getPostFromUser();
-    setPost(postFromUser);
-    renderPost();
+    addPost(postFromUser);
+    renderPosts();
 });
 
 function getPostFromUser() { // возвращает пост
-    const post = titleInputNode.value;
-    return post;
+    const title = postTitleInputNode.value;
+    const text = postTextInputNode.value;
+
+    return {
+        title: title,
+        text: text,
+    };
 }
-function setPost(newPost) { // сохраняет пост
-    post = newPost;
+function addPost({title, text}) { // сохраняет пост
+    posts.push({
+        title: title,
+        text: text,
+    });
 }
-function renderPost() { // отображает пост
-    postsNode.innerText = post;
+function getPosts() {
+    return posts;
+}
+function renderPosts() { // отображает пост
+    const posts = getPosts();
+
+    let postsHTML = '';
+
+    posts.forEach(post => {
+        postsHTML += `
+            <div class= post>
+                <p class='post__title'>${post.title}</p>
+                <p class= 'post__text'>${post.text}</p>
+            </div>`
+    });
+
+    postsNode.innerHTML = postsHTML;
 }

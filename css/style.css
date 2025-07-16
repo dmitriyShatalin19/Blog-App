@@ -27,6 +27,15 @@ body {
     color: #979797;
     border: 1px solid black;
 }
+.text-input {
+    width: 500px;
+    height: 250px;
+    margin-bottom: 30px;
+    padding: 11px 0px 10px 20px;
+    font-size: 32px;
+    color: #979797;
+    border: 1px solid black;
+}
 .new-post-btn {
     width: 500px;
     height: 60px;
@@ -35,7 +44,17 @@ body {
     font-size: 32px;
     color: #fff;
 }
-.posts__title {
+.title__posts {
     font-size: 32px;
     color: #979797;
+}
+.post__title {
+    font-weight: 700;
+    font-size: 32px;
+    color: #979797;
+    margin-bottom: 25px;
+}
+.post__text {
+    font-size: 25px;
+    color: #000000;
 }
