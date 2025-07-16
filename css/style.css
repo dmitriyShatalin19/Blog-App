@@ -58,3 +58,10 @@ body {
     font-size: 25px;
     color: #000000;
 }
+.validation {
+    margin-top: 20px;
+    color: red;
+}
+.validationMessege_hidden {
+    display: none;
+}
