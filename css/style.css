@@ -21,7 +21,6 @@ body {
     width: 500px;
     height: 60px;
     padding: 11px 0px 10px 20px;
-    display: block;
     margin-bottom: 30px;
     font-size: 32px;
     color: #979797;
@@ -44,14 +43,10 @@ body {
     font-size: 32px;
     color: #fff;
 }
-.title__posts {
-    font-size: 32px;
-    color: #979797;
-}
 .post__title {
     font-weight: 700;
     font-size: 32px;
-    color: #979797;
+    color: #000000;
     margin-bottom: 25px;
 }
 .post__text {
@@ -64,4 +59,78 @@ body {
 }
 .validationMessege_hidden {
     display: none;
+}
+/* адаптив */
+@media (max-width: 1199px) {
+    .content {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .posts-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 60px;
+    }
+    .subtitle {
+        margin-bottom: 45px;
+        font-size: 36px;
+    }
+    .title-input {
+        width: 100%;
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+    .text-input {
+        width: 100%;
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+    .new-post-btn {
+        width: 100%;
+        font-size: 26px;
+    }
+    .post__title {
+        font-size: 28px;
+    }
+    .post__text {
+        font-size: 28px;
+    }
+}
+@media (max-width: 319px) {
+    .content {
+        padding-top: 80px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .posts-content {
+        gap: 40px;
+    }
+    .subtitle {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .title-input {
+        margin-bottom: 18px;
+        padding: 8px 0px 8px 15px;
+        font-size: 24px;
+    }
+    .text-input {
+        margin-bottom: 18px;
+        font-size: 24px;
+    }
+    .new-post-btn {
+        font-size: 22px;
+    }
+    .post__title {
+        margin-bottom: 18px;
+    }
+    .post__title, 
+    .post__text {
+        font-size: 24px;
+    }
 }
