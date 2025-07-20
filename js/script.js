@@ -14,6 +14,10 @@ newPostBtnNode.addEventListener('click', function() { // обработка пр
     const postFromUser = getPostFromUser();
     addPost(postFromUser);
     renderPosts();
+    if (posts.length === 0) {
+    postsNode.innerHTML = 'Пока пусто...';
+    return;
+}
 });
 postTitleInputNode.addEventListener('input',validation);
 postTextInputNode.addEventListener('input',validation);
@@ -46,7 +50,11 @@ function getPostFromUser() { // возвращает пост
     }
 }
 function addPost({title, text}) { // сохраняет пост
+    const carrentDate = new Date();
+    const dt = `${carrentDate.getHours()} : ${carrentDate.getMinutes()}`;
+
     posts.push({
+        dt: dt,
         title: title,
         text: text,
     });
@@ -62,6 +70,7 @@ function renderPosts() { // отображает пост
     posts.forEach(post => {
         postsHTML += `
             <div class= post>
+                <p class='post__date'>${post.dt}</p>
                 <p class='post__title'>${post.title}</p>
                 <p class= 'post__text'>${post.text}</p>
             </div>`
