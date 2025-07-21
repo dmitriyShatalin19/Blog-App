@@ -51,7 +51,7 @@ function getPostFromUser() { // возвращает пост
 }
 function addPost({title, text}) { // сохраняет пост
     const carrentDate = new Date();
-    const dt = `${carrentDate.getHours()} : ${carrentDate.getMinutes()}`;
+    const dt = `${carrentDate.getDate()}.${carrentDate.getMonth()}.${carrentDate.getFullYear()}  ${carrentDate.getHours()}:${carrentDate.getMinutes()}`;
 
     posts.push({
         dt: dt,
